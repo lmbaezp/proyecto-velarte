@@ -1,0 +1,778 @@
+/*========================================================GENERALES===========================================================*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: var(--bgr-color-btn);
+    border: none;
+    padding: 12px 24px;
+    color: #000000;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-size: 15px;
+    z-index: 1000;
+    /* Valor alto para estar por encima de todos los elementos */
+}
+
+button:hover {
+    color: var(--color-links-hover);
+}
+
+/*--PALETA DE COLORES*/
+:root {
+    --bgr-color-header-footer: #e2e3de;
+    --bgr-color-btn: #fdf1f1;
+    --bgr-txt-banner: rgba(131, 123, 113, .5);
+    --bgr-product: #F3F2E9;
+    --color-black: #000;
+    --color-light: #fdf1f1;
+    --color-links-hover: #fd9797;
+    --color-txt-emphasis: #2A3D2C;
+    --color-titles: #41452c;
+    --border-radius-btn: 12px;
+}
+
+/*TIPOGRAFIAS*/
+/*TIPOGRAFIA FRASE LOGO*/
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*MONTSERRAT TITLE BANNER INICIO*/
+.montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*AMITA REGULAR*/
+.amita-regular {
+    font-family: "Amita", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*AMITA BOLD*/
+.amita-bold {
+    font-family: "Amita", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*MONTSERRAT REGULAR*/
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-black);
+}
+
+
+/*=============================================================INICIO CSS HEADER==========================================================*/
+
+.navbar {
+    padding: 6px 80px 10px 20px;
+}
+
+.bg-custom {
+    background-color: var(--bgr-color-header-footer);
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar-brand img {
+    width: 120px;
+}
+
+.brand-slogan {
+    font-size: 15px;
+    padding-left: 10px;
+    color: var(--color-txt-emphasis);
+}
+
+.navbar-collapse {
+    text-align: right;
+}
+
+.nav-link {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
+    color: var(--color-txt-emphasis);
+}
+
+.nav-link:hover {
+    color: var(--color-links-hover);
+}
+
+.navbar-toggler {
+    border: none;
+    color: var(--color-txt-emphasis);
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-toggler-icon i {
+    font-size: 24px;
+    color: var(--color-txt-emphasis);
+}
+
+.navbar-toggler-icon i:hover {
+    color: var(--color-links-hover)
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 6px 50px 10px 20px;
+    }
+}
+
+/*===============================================================FIN CSS HEADER================================================*/
+
+/*===================================================INICIO CSS BANNER PRINCIPAL=================================================*/
+/* Cambiado de imagen a div con background-image */
+.texto-banner h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.texto-banner h2 {
+    font-family: "Amita", serif;
+    font-weight: 400;
+}
+
+/* Sección del Banner */
+.banner-principal-seccion1 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Contenedor del texto */
+.txt-btn-banner-principal {
+    position: absolute;
+    bottom: 70px;
+    /* Aumentado para subir el texto dentro del banner */
+    right: 32px;
+    max-width: 600px;
+    /*Aumentado de 400px a 600px */
+    width: 80%;
+    /*Añadido para ocupar más espacio horizontal */
+}
+
+.texto-banner {
+    background: rgba(0, 0, 0, 0.39);
+    padding: 24px;
+    border-radius: 8px;
+    color: white;
+}
+
+/*===================================================FIN CSS BANNER PRINCIPAL===================================================*/
+
+/*===================================================INICIO CSS QUIENES SOMOS===================================================*/
+.quienes-somos {
+    padding: 100px;
+}
+
+.quienes-somos p {
+    font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+    .quienes-somos img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .quienes-somos img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .quienes-somos p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .quienes-somos p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 780px) {
+    .quienes-somos {
+        padding: 60px;
+    }
+}
+
+/*===================================================FIN CSS QUIENES SOMOS====================================================*/
+
+/*==============================================================INICIO CSS PRODUCTOS===============================================*/
+.products {
+    padding: 60px 100px;
+    background-color: var(--color-light);
+}
+
+.products h2 {
+    font-size: 28px;
+    color: var(--color-titles);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#grafico {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+.products h6 {
+    font-size: 20px;
+    color: #41452C;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.product-item {
+    background: var(--bgr-product);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*==============================================================FIN CSS PRODUCTOS===============================================*/
+
+/*===================================================INICIO CSS BANNER SEMANA SANTA=============================================*/
+#carousel-semana-santa {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Asegurar que las imágenes cubran todo el espacio disponible */
+.carousel-item img {
+    object-fit: fill;
+    width: 100%;
+    z-index: -3;
+}
+
+#carouselSemanaSanta .txt-btn-banner-semana-santa {
+    position: absolute;
+    bottom: 100px;
+    right: 350px;
+    margin: auto;
+    color: white;
+    max-width: 550px;
+    /*Aumentado de 400px a 600px */
+    width: 70%;
+    /*Añadido para ocupar más espacio horizontal */
+    z-index: 2;
+}
+
+#carouselSemanaSanta .txt-banner-semana-santa {
+    background: rgba(0, 0, 0, 0.39);
+    border-radius: 8px;
+}
+
+.carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+    font-size: 40px;
+}
+
+.carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+    font-size: 20px;
+}
+
+#carouselSemanaSanta .carousel-control-next {
+    justify-content: end;
+}
+
+#carouselSemanaSanta .carousel-control-prev {
+    justify-content: start !important;
+}
+
+#carouselSemanaSanta .carousel-control-next-icon,
+#carouselSemanaSanta .carousel-control-prev-icon {
+    width: 70px !important;
+    height: 70px !important;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*
+@media (max-width: 1490px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 100px;
+        right: 300px;
+    }
+}
+
+@media (max-width: 1390px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 100px;
+        right: 270px;
+    }
+}
+
+@media (max-width: 1350px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 100px;
+        right: 250px;
+    }
+}
+
+@media (max-width: 1315px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 100px;
+        right: 200px;
+    }
+}
+
+@media (max-width: 1345px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 100px;
+        right: 180px;
+    }
+}
+
+@media (max-width: 1210px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 65px;
+        right: 150px;
+    }
+}
+
+@media (max-width: 1170px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 60px;
+        right: 300px;
+        max-width: 400px;
+        width: 70%;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+        font-size: 30px;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1100px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 60px;
+        right: 250px;
+        max-width: 400px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 1010px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 50px;
+        right: 220px;
+        max-width: 400px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 970px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 45px;
+        right: 200px;
+        max-width: 400px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 1010px) {
+    .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+        font-size: 25px;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 940px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 45px;
+        right: 180px;
+        max-width: 400px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 45px;
+        right: 150px;
+        max-width: 400px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 850px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 40px;
+        right: 200px;
+        max-width: 300px;
+        width: 50%;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+        font-size: 20px;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 40px;
+        right: 180px;
+        max-width: 300px;
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 750px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 40px;
+        right: 160px;
+        max-width: 300px;
+        width: 50%;
+    }
+
+    button {
+        background-color: var(--bgr-color-btn);
+        border: none;
+        padding: 8px 20px;
+        color: #000000;
+        box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        font-size: 13px;
+        z-index: 1000;
+
+    }
+
+    #carouselSemanaSanta .carousel-control-next-icon,
+    #carouselSemanaSanta .carousel-control-prev-icon {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    #carouselSemanaSanta .txt-banner-semana-santa {
+        padding: 8px 12px !important;
+    }
+
+}
+
+@media (max-width: 730px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 40px;
+        right: 140px;
+        max-width: 300px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 695px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 40px;
+        right: 120px;
+        max-width: 300px;
+        width: 50%;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+        font-size: 17px;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 665px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 40px;
+        right: 120px;
+        max-width: 300px;
+        width: 40%;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+        font-size: 15px;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+        font-size: 12px;
+    }
+
+    button {
+        background-color: var(--bgr-color-btn);
+        border: none;
+        padding: 6px 14px;
+        color: #000000;
+        box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        font-size: 12px;
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 595px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 40px;
+        right: 120px;
+        max-width: 300px;
+        width: 40%;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+        font-size: 13px;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+        font-size: 11px;
+    }
+
+    button {
+        background-color: var(--bgr-color-btn);
+        border: none;
+        padding: 6px 10px;
+        color: #000000;
+        box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        font-size: 11px;
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 560px) {
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        bottom: 20px;
+        right: 120px;
+        max-width: 300px;
+        width: 40%;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+        font-size: 12px;
+    }
+
+    .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+        font-size: 10px;
+    }
+}*/
+
+/*=========================================================FIN BANNER SEMANA SANTA==============================================*/
+
+/*==============================================================INICIO CSS FOOTER===============================================*/
+footer {
+    background-color: #e2e3de;
+    padding: 15px 0 60px;
+}
+
+footer .logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 25px;
+    text-decoration: none;
+}
+
+footer .logo-footer span {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 25px;
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #2a3d2c;
+}
+
+footer .logo-footer img {
+    margin: 0;
+    width: 45%;
+    max-width: 180px;
+}
+
+footer p {
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #41452c;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px;
+    gap: 95px;
+    align-items: center;
+    align-content: center;
+
+}
+
+footer .redes .icono-redes {
+    font-size: 35px;
+    color: var(--color-titles);
+}
+
+footer .chat {
+    text-decoration: none;
+}
+
+footer .redes i:hover {
+    color: var(--color-links-hover);
+}
+
+footer .ubicacion,
+footer .phone {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+}
+
+footer .ubicacion p,
+footer .phone p {
+    margin: 0;
+    text-align: center;
+}
+
+footer .ubicacion {
+    margin-bottom: 5px;
+}
+
+footer .ubicacion i {
+    color: var(--color-titles);
+}
+
+footer .phone div {
+    background-color: var(--color-titles);
+    /* Color verde de WhatsApp */
+    color: white;
+    /* Color del icono */
+    width: 10px;
+    /* Ajusta el tamaño del botón */
+    height: 10px;
+    border-radius: 50%;
+    /* Hace que el fondo sea redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/*================================================================FIN CSS FOOTER=============================================*/

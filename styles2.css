@@ -1,0 +1,703 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #f2f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bgr-color-light-gray: #f2f1f1;
+    --bgr-color-btn: #fdf1f1;
+    --bgr-txt-banner: rgba(131, 123, 113, .5);
+    --bgr-product: #F3F2E9;
+    --color-black: #000;
+    --color-light: #fdf1f1;
+    --color-links-hover: #fd9797;
+    --color-txt-emphasis: #2A3D2C;
+    --color-titles: #41452c;
+    --font-size-txt: 20px;
+    --font-size-txt-btn: 15px;
+    --border-radius-btn: 12px;
+}
+
+/*TIPOGRAFIAS*/
+/*TIPOGRAFIA FRASE LOGO*/
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*MONTSERRAT TITLE BANNER INICIO*/
+.montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*AMITA REGULAR*/
+.amita-regular {
+    font-family: "Amita", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*AMITA BOLD*/
+.amita-bold {
+    font-family: "Amita", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*MONTSERRAT REGULAR*/
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-black);
+}
+
+/*SECCION BANNER INICIO*/
+/* Cambiado de imagen a div con background-image */
+.banner-principal-seccion1 .imagen-banner-fondo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+}
+
+.banner-principal-seccion1 h1 {
+    font-size: 40px;
+}
+
+.banner-principal-seccion1 h2 {
+    font-size: 30px;
+}
+
+.txt-btn-banner {
+    position: absolute;
+    top: 55%;
+    /* Aumentado para subir el texto dentro del banner */
+    right: 3%;
+    color: var(--color-light);
+}
+
+.txt-banner,
+#carouselSemanaSanta .txt-banner-semana-santa {
+    background: var(--bgr-txt-banner);
+    border-radius: 8px;
+}
+
+/*SECCION CONOCENOS*/
+.seccion-conocenos,
+.proceso-seccion-6 {
+    padding: 5vw 10vw;
+}
+
+.seccion-conocenos .text-seccion-conocenos {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seccion-conocenos .text-seccion-conocenos p,
+.proceso-seccion-6 .txt-btn-proceso .txt-proceso {
+    font-size: var(--font-size-txt);
+    line-height: 1.6;
+    color: var(--color-black);
+}
+
+/*CONFIGURACION BOTON*/
+.proceso-seccion-6 .txt-btn-proceso .btn-contactanos-proceso,
+.banner-principal-seccion1 .txt-btn-banner .btn-banner-inicio,
+.carousel .txt-btn-banner-semana-santa .btn-contactanos-banner-semana-santa {
+    float: right;
+    border-radius: var(--border-radius-btn);
+    background-color: var(--bgr-color-btn);
+    box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+    text-decoration: none;
+    color: var(--color-black);
+    font-size: var(--font-size-txt-btn);
+}
+
+.proceso-seccion-6 .txt-btn-proceso .btn-contactanos-proceso:hover,
+.banner-principal-seccion1 .txt-btn-banner .btn-banner-inicio:hover,
+.carousel .txt-btn-banner-semana-santa .btn-contactanos-banner-semana-santa:hover {
+    color: var(--color-links-hover);
+}
+
+/*FIN CONFIGURACIÓN BOTONES*/
+
+/*BANNER SEMANA SANTA*/
+#carouselSemanaSanta {
+    position: relative;
+    z-index: 1;
+}
+
+#carouselSemanaSanta .txt-btn-banner-semana-santa {
+    width: auto;
+    position: absolute;
+    top: 30%;
+    right: 27%;
+    z-index: 3;
+}
+
+.carousel .txt-btn-banner-semana-santa {
+    color: var(--color-light);
+}
+
+.carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+    font-size: 40px;
+}
+
+.carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+    font-size: 20px;
+}
+
+#carouselSemanaSanta .carousel-control-next {
+    justify-content: end;
+}
+
+#carouselSemanaSanta .carousel-control-prev {
+    justify-content: start !important;
+}
+
+#carouselSemanaSanta .carousel-control-next-icon,
+#carouselSemanaSanta .carousel-control-prev-icon {
+    width: 70px !important;
+    height: 70px !important;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*SECCION PROCESOS*/
+.proceso-seccion-6 .carousel .carousel-item {
+    transition-duration: 1.5s;
+}
+
+.proceso-seccion-6 #carouselProceso .carousel-inner {
+    width: 399px;
+    height: 399px;
+}
+
+.proceso-seccion-6 .carousel .carousel-indicators {
+    position: relative;
+}
+
+.proceso-seccion-6 .carousel .carousel-indicators .indicator {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.proceso-seccion-6 .carousel-indicators .active {
+    opacity: 1 !important;
+    background-color: var(--color-links-hover) !important;
+}
+
+.proceso-seccion-6 .txt-btn-proceso .amita-regular {
+    color: var(--color-txt-emphasis);
+}
+
+/*BOTON FLOTANTE WHATSAPP*/
+.btn-whatsapp-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/*MEDIA*/
+/*responsive*/
+@media (min-width: 576px) and (max-width: 768px) {
+
+    .seccion-conocenos,
+    .proceso-seccion-6 {
+        padding: 5vw;
+    }
+
+    .banner-principal-seccion1 {
+        height: 300px;
+    }
+
+    .banner-principal-seccion1 h1,
+    .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+        font-size: 20px;
+    }
+
+    .banner-principal-seccion1 h2,
+    .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+        font-size: 15px;
+    }
+
+    .banner-principal-seccion1 .txt-btn-banner {
+        position: absolute;
+        top: 25%;
+        right: 3%;
+        color: var(--color-light);
+    }
+
+    #carouselSemanaSanta .carousel-item img {
+        height: 300px;
+    }
+
+    #carouselSemanaSanta .txt-btn-banner-semana-santa {
+        position: absolute;
+        top: 30%;
+        right: 12%;
+        color: var(--color-light);
+    }
+
+    #carouselSemanaSanta .carousel-control-next-icon,
+    #carouselSemanaSanta .carousel-control-prev-icon {
+        width: 50px !important;
+        height: 50px !important;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 1000px) {
+
+        .seccion-conocenos,
+        .proceso-seccion-6 {
+            padding: 5vw;
+        }
+
+        .banner-principal-seccion1 {
+            height: 450px;
+        }
+
+        .banner-principal-seccion1 h1,
+        .carousel .txt-btn-banner-semana-santa .frase-principal-texto-banner-semana-santa {
+            font-size: 20px;
+        }
+
+        .banner-principal-seccion1 h2,
+        .carousel .txt-btn-banner-semana-santa .frase-secundaria-texto-banner-semana-santa {
+            font-size: 15px;
+        }
+
+        .banner-principal-seccion1 .txt-btn-banner {
+            position: absolute;
+            top: 35%;
+            right: 3%;
+            color: var(--color-light);
+        }
+
+        #carouselSemanaSanta .carousel-item img {
+            height: 450px;
+        }
+
+        #carouselSemanaSanta .txt-btn-banner-semana-santa {
+            position: absolute;
+            top: 30%;
+            right: 12%;
+            color: var(--color-light);
+        }
+
+        #carouselSemanaSanta .carousel-control-next-icon,
+        #carouselSemanaSanta .carousel-control-prev-icon {
+            width: 50px !important;
+            height: 50px !important;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .seccion-conocenos .text-seccion-conocenos p,
+        .proceso-seccion-6 .txt-btn-proceso .txt-proceso {
+            font-size: 15px;
+        }
+
+    }
+}
+
+/*-------------------------------------------------CSS PRODUCTOS-------------------------------------------------------*/
+/* Products Section */
+.products {
+    padding: 60px 0;
+    background-color: #FDf1f1;
+}
+
+.products h2 {
+    font-size: 32px;
+    color: var(--color-titles);
+}
+
+.products h4 {
+    font-size: 24px;
+    color: var(--color-titles);
+}
+
+#grafico {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+    padding: 0 60px;
+}
+
+.product-grid a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.product-item {
+    background: var(--bgr-product);
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Responsive Design*/
+
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 578px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*-----------------------------------------------------------CSS FORMULARIO--------------------------------------------*/
+.formulario {
+    box-sizing: border-box;
+    background-color: var(--bgr-color-btn);
+    padding: 15px 0;
+}
+
+.formulario form {
+    margin: 0 200px;
+}
+
+/* Títulos formulario */
+.title-1-formulario {
+    color: var(--color-titles);
+    text-align: center;
+    font-family: "Amita", "sans-serif";
+    font-size: 24px;
+    font-weight: 400;
+    height: 40px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.linea-divisora-formulario {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.title-2-formulario {
+    color: var(--color-titles);
+    text-align: center;
+    font-family: "Amita", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+/* Input formulario*/
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    align-content: center;
+    margin: 15px auto;
+
+}
+
+.input-label {
+    width: 30%;
+    color: #000000;
+    text-align: right;
+    align-self: center;
+    font-family: "Inter", sans-serif;
+    font-size: var(--font-size-txt);
+    font-weight: 400;
+    padding-right: 20px;
+}
+
+.box-input {
+    width: 70%;
+    background-color: #fff;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: var(--font-size-txt-btn);
+    font-weight: 400;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+/* Botón */
+.formulario .button {
+    background-color: #FBE4D4;
+    border-radius: var(--border-radius-btn);
+    /*width: 252px;
+    height: 60px;*/
+    position: relative;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    border: none;
+    text-align: center;
+    margin: 50px;
+}
+
+.formulario .button:hover {
+    color: var(--color-links-hover);
+}
+
+@media (max-width: 768px) {
+    .title-1-formulario {
+        font-size: 1.8rem;
+        /* Ajuste de tamaño de fuente para pantallas más pequeñas */
+    }
+
+    .linea-divisora-formulario {
+        height: 30px;
+        margin: 5px auto;
+        max-width: 100%;
+    }
+
+    .title-2-formulario {
+        font-size: 2rem;
+    }
+
+    .input-label {
+        font-size: 18px;
+        /* Reducir el tamaño de la fuente */
+        text-align: left;
+        /* Cambiar la alineación a izquierda */
+        left: 7%;
+        /* Ajustar el margen izquierdo */
+        right: 5%;
+        /* Ajustar el margen derecho */
+        width: 90%;
+        /* Hacer el ancho más pequeño para dispositivos móviles */
+        padding-right: 5px;
+        /* Ajustar el padding */
+    }
+
+    .box-input,
+    .box-input-opinion {
+        font-size: 1.2rem;
+        /* Ajuste de texto */
+    }
+
+    .button {
+        width: 50%;
+    }
+}
+
+
+/*------------------------------------------------CSS HEADER AND FOOTER---------------------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e2e3de;
+    align-items: center;
+    padding: 6px 80px 10px 20px;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+header div p {
+    font-size: 15px;
+    margin: 0;
+    padding-left: 25px;
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color:
+        #2a3d2c;
+
+}
+
+header div img {
+    margin: 0;
+    width: 50%;
+}
+
+header nav {
+    display: flex;
+    align-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal;
+    color:#41452c;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #fd9797;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #e2e3de;
+    padding: 15px 0 60px;
+}
+
+footer .logo-footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+footer .logo-footer p {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 25px;
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #2a3d2c;
+
+}
+
+footer .logo-footer img {
+    margin: 0;
+    width: 45%;
+    max-width: 180px;
+}
+
+footer p {
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #41452c;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px;
+    gap: 95px;
+    align-items: center;
+    align-content: center;
+
+}
+
+footer .redes .icono-redes {
+    font-size: 35px;
+    color: #41452c;
+}
+
+footer .chat {
+    text-decoration: none;
+}
+
+footer .redes i:hover {
+    color: #fd9797;
+}
+
+footer .ubicacion,
+footer .phone {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+
+}
+
+footer .ubicacion p,
+footer .phone p {
+    margin: 0;
+    text-align: center;
+}
+
+footer .ubicacion{ margin-bottom: 5px;}
+footer .ubicacion i {
+    color: #41452c;
+    z-index: 2;
+}
+
+footer .phone div {
+    background-color: #41452c;
+    /* Color verde de WhatsApp */
+    color: white;
+    /* Color del icono */
+    width: 10px;
+    /* Ajusta el tamaño del botón */
+    height: 10px;
+    border-radius: 50%;
+    /* Hace que el fondo sea redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
